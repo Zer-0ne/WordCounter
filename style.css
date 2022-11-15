@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    color: aqua;
+}
+
+.body_container {
+    display: flex;
+    justify-content: center;
+    padding: 10vh 0vh;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+
+}
+
+.body_container .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 15vw;
+    height: 42vh;
+}
+
+.body_container .content h2 {
+    font-size: 1vw;
+    position: absolute;
+    top: 69px;
+    left: 11px;
+    margin-bottom: 2vh;
+}
+
+.body_container .content textarea {
+    caret-color: aqua;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all .3s ease-in;
+    position: absolute;
+    top: 100px;
+}
+
+.body_container .content textarea:focus {
+    /* border: 2px solid aqua; */
+    border: none;
+    outline: none;
+    /* box-shadow: 0px 0px 8px aqua; */
+    animation: mymove 1s infinite;
+    transition: all .3s ease-in;
+    
+}
+
+@keyframes mymove {
+    0% {
+        box-shadow: 2px 0px 2px aqua, -2px 0px 4px red;
+        
+    }
+
+    25% {
+        box-shadow: 0px 2px 2px aqua, 0px -2px 2px red;
+        
+
+    }
+
+    50% {
+        box-shadow: -2px 0px 2px aqua, 2px 0px 2px red;
+        
+
+    }
+
+    75% {
+        box-shadow: 0px -2px 2px aqua, 0px 2px 2px red;
+        
+    }
+
+    100% {
+        box-shadow: 2px 0px 2px aqua, -2px 0px 2px red;
+        
+    }
+}
+
+.body_container .content button {
+    border: none;
+    outline: none;
+    padding: 4px 26px;
+    /* margin: 15px 225px 0px 0px; */
+    font-size: 14px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px;
+    position: absolute;
+    right: 16px;
+    bottom: 64px;
+    transition: all .3s ease-in;
+}
+
+.body_container .content button:hover {
+    /* box-shadow: 1px 1px 5px 0px aqua, -1px -1px 5px 0px red; */
+    animation: mymove 1s infinite;
+    padding: 5px 27px;
+    font-size: 16px;
+}
+
+.body_container .content button:active {
+    padding: 3px 25px;
+    font-size: 13px
+}
+.body_container .content .number{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px 10px 0px;
+    position: absolute;
+    left: 11px;
+    bottom: -1px;
+}
+.loading{
+    font-size: 14px;
+    font-weight: 100;
+}
